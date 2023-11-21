@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inspirational and Funny Quotes Widget</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        #quoteWidget {
+            text-align: center;
+            font-family: Roboto, Arial, sans-serif;
+            border: 2px solid #4e2d82;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        #quoteButton {
+            background: #4e2d82;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quoteWidget">
+    <h2>Get Inspired or Have a Laugh!</h2>
+    <p id="quoteGenius"></p>
+    <button id="quoteButton">Generate Quote</button>
+
+    <script>
+        document.getElementById('quoteButton').addEventListener('click', function () {
+            generateQuote();
+        });
+
+        function generateQuote() {
+            var quotes = [
+                // Inspirational Quotes
+                "The only way to do great work is to love what you do. - Steve Jobs",
+                "Believe you can and you're halfway there. - Theodore Roosevelt",
+                "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+                "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+                "Strive not to be a success, but rather to be of value. - Albert Einstein",
+                "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+                "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+                "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+                "Do not wait to strike till the iron is hot, but make it hot by striking. - William Butler Yeats",
+                "The best way to predict the future is to create it. - Peter Drucker",
+                "The purpose of our lives is to be happy. - Dalai Lama",
+                "It does not matter how slowly you go, as long as you do not stop. - Confucius",
+                "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
+                "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
+                "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+                "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+                "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle. - Christian D. Larson",
+                "It always seems impossible until it's done. - Nelson Mandela",
+                "The only place where success comes before work is in the dictionary. - Vidal Sassoon",
+                "Your attitude, not your aptitude, will determine your altitude. - Zig Ziglar",
+                
+                // Funny Quotes
+                "Why don't scientists trust atoms? Because they make up everything!",
+                "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+                "I'm reading a book on anti-gravity. It's impossible to put down!",
+                "I used to be a baker because I kneaded dough.",
+                "I told my computer I needed a break, and now it won't stop sending me vacation ads.",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "I told my wife she should embrace her mistakes. She gave me a hug.",
+                "I used to be a baker because I kneaded dough.",
+                "I'm on a whiskey diet. I've lost three days already.",
+                "I'm writing a book on anti-gravity. It's impossible to put down!",
+                "I told my wife she should embrace her mistakes. She gave me a hug.",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                "I told my computer I needed a break, and now it won't stop sending me vacation ads.",
+                "I'm on a whiskey diet. I've lost three days already.",
+                "Why don't skeletons fight each other? They don't have the guts!",
+                "I told my wife she should embrace her mistakes. She gave me a hug.",
+                "I used to be a baker because I kneaded dough.",
+                "I'm on a whiskey diet. I've lost three days already.",
+                "Why don't skeletons fight each other? They don't have the guts!"
+            ];
+
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+            var randomQuote = quotes[randomIndex];
+
+            document.getElementById('quoteGenius').textContent = randomQuote;
+        }
+    </script>
+</div>
+
+</body>
+</html>
